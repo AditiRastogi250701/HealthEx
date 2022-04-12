@@ -1,6 +1,8 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+import 'package:healthex/about.dart';
 import 'package:healthex/disease.dart';
 
 class HomePage extends StatefulWidget {
@@ -12,14 +14,14 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.black,
-      drawer: Drawer(
-        backgroundColor: Colors.white,
-        child: Icon(
-          Icons.abc,
-          color: Colors.black,
-        ),
-      ),
+      backgroundColor: Colors.grey.shade900,
+      // drawer: Drawer(
+      //   backgroundColor: Colors.black,
+      //   child: Icon(
+      //     Icons.abc,
+      //     color: Colors.black,
+      //   ),
+      // ),
       appBar: AppBar(
         backgroundColor: Colors.black,
         title: Text(
@@ -33,13 +35,31 @@ class _HomePageState extends State<HomePage> {
         ),
         actions: [
           PopupMenuButton(
+              color: Colors.grey.shade900,
+              onSelected: (value) {
+                setState(() {
+                  if (value == 1) {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => Disease()),
+                    );
+                  }
+                });
+              },
               itemBuilder: (context) => [
                     PopupMenuItem(
-                      child: Text("About"),
+                      child: Text(
+                        "About",
+                        style: TextStyle(color: Colors.white),
+                      ),
                       value: 1,
                     ),
                     PopupMenuItem(
-                      child: Text("Exit"),
+                      onTap: () {
+                        SystemNavigator.pop();
+                      },
+                      child:
+                          Text("Exit", style: TextStyle(color: Colors.white)),
                       value: 2,
                     )
                   ])
@@ -56,9 +76,9 @@ class _HomePageState extends State<HomePage> {
             children: [
               card(
                 url:
-                    'https://www.cancer.gov/sites/g/files/xnrzdm211/files/styles/cgov_article/public/cgov_contextual_image/100/900/3/files/dividing-breast-cancer-cell-article-only.jpg?itok=7_RRcbFU',
-                t: 'Know more about Cancer',
-                d: 'ajldfkjakdfj addklfjalkdfjalk akldfjakldfj adklfjalkdf jakldfja kldfjakd falkfdfj kladkfj',
+                    'https://neurologysleepcentre.com/blog/wp-content/uploads/2021/12/parkinson2.jpg',
+                t: "Parkinson's Disease",
+                d: "A disorder of the central nervous system that affects movement, often including tremors. Nerve cell damage in the brain causes dopamine levels to drop, leading to the symptoms of Parkinson's. Parkinson's often starts with a tremor in one hand .......",
               ),
               SizedBox(
                 height: 10,
@@ -101,13 +121,13 @@ class card extends StatelessWidget {
       onTap: () {
         Navigator.push(
           context,
-          MaterialPageRoute(builder: (context) => Disease()),
+          MaterialPageRoute(builder: (context) => About()),
         );
       },
       child: Container(
         decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(5),
-          color: Colors.grey.shade900,
+          borderRadius: BorderRadius.circular(10),
+          color: Colors.black,
         ),
         //height: 200,
         width: double.infinity,
@@ -117,7 +137,7 @@ class card extends StatelessWidget {
           children: [
             Center(
               child: Padding(
-                padding: const EdgeInsets.all(10.0),
+                padding: const EdgeInsets.only(left: 10.0, right: 10, top: 10),
                 child: Text(
                   t,
                   style: TextStyle(
@@ -127,9 +147,12 @@ class card extends StatelessWidget {
                 ),
               ),
             ),
-            Image(image: NetworkImage(url)),
             Padding(
               padding: const EdgeInsets.all(10.0),
+              child: Image(image: NetworkImage(url)),
+            ),
+            Padding(
+              padding: const EdgeInsets.only(left: 10.0, right: 10, bottom: 20),
               child: Text(
                 d,
                 style: TextStyle(
