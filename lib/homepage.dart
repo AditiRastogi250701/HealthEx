@@ -1,100 +1,146 @@
-// ignore_for_file: prefer_const_constructors, sized_box_for_whitespace
+// ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
+import 'package:healthex/disease.dart';
 
-class HomePage extends StatelessWidget {
+class HomePage extends StatefulWidget {
+  @override
+  State<HomePage> createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.all(10),
-      child: SingleChildScrollView(
-        scrollDirection: Axis.vertical,
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.start,
-          // ignore: prefer_const_literals_to_create_immutables
-          children: [
-            SizedBox(
-              height: 30,
-            ),
-            card(),
-            SizedBox(
-              height: 20,
-            ),
-            card(),
-            SizedBox(
-              height: 20,
-            ),
-            card(),
-            SizedBox(
-              height: 20,
-            ),
-            card(),
-            SizedBox(
-              height: 20,
-            ),
-            card(),
-            SizedBox(
-              height: 20,
-            ),
-          ],
+    return Scaffold(
+      backgroundColor: Colors.black,
+      drawer: Drawer(
+        backgroundColor: Colors.white,
+        child: Icon(
+          Icons.abc,
+          color: Colors.black,
         ),
       ),
-    );
-  }
-
-  Column card() {
-    return Column(
-      children: [
-        Container(
-          decoration: BoxDecoration(
-              color: Colors.purple,
-              borderRadius: BorderRadius.only(
-                  topLeft: Radius.circular(10), topRight: Radius.circular(10))),
-          height: 30,
-          width: double.infinity,
-          child: Center(
-            child: Text('Hello',
-                style: TextStyle(
-                  fontSize: 20,
-                  color: Colors.white,
-                )),
+      appBar: AppBar(
+        backgroundColor: Colors.black,
+        title: Text(
+          'HealthEx',
+          style: TextStyle(
+            fontSize: 25,
+            fontStyle: FontStyle.italic,
+            fontWeight: FontWeight.bold,
+            color: Colors.white,
           ),
         ),
-        Container(
-          padding: EdgeInsets.all(10),
-          height: 100,
-          color: Colors.purple,
-          child: Row(
+        actions: [
+          PopupMenuButton(
+              itemBuilder: (context) => [
+                    PopupMenuItem(
+                      child: Text("About"),
+                      value: 1,
+                    ),
+                    PopupMenuItem(
+                      child: Text("Exit"),
+                      value: 2,
+                    )
+                  ])
+        ],
+        elevation: 2,
+        centerTitle: true,
+      ),
+      body: Padding(
+        padding: EdgeInsets.all(10.0),
+        child: SingleChildScrollView(
+          scrollDirection: Axis.vertical,
+          child: Column(
+            // ignore: prefer_const_literals_to_create_immutables
             children: [
-              Container(
-                height: 90,
-                decoration: BoxDecoration(
-                    borderRadius: BorderRadius.only(
-                        topLeft: Radius.circular(10),
-                        topRight: Radius.circular(10))),
-                child: ClipRRect(
-                  borderRadius: BorderRadius.circular(10),
-                  child: Image(
-                    image: NetworkImage(
-                        'https://neurologysleepcentre.com/blog/wp-content/uploads/2021/12/parkinson2.jpg'),
-                  ),
-                ),
+              card(
+                url:
+                    'https://www.cancer.gov/sites/g/files/xnrzdm211/files/styles/cgov_article/public/cgov_contextual_image/100/900/3/files/dividing-breast-cancer-cell-article-only.jpg?itok=7_RRcbFU',
+                t: 'Know more about Cancer',
+                d: 'ajldfkjakdfj addklfjalkdfjalk akldfjakldfj adklfjalkdf jakldfja kldfjakd falkfdfj kladkfj',
               ),
               SizedBox(
-                width: 5,
+                height: 10,
               ),
-              Container(
-                width: 220,
-                child: RichText(
-                  text: TextSpan(
-                      text:
-                          "Hello lkjalkdfj akdlfjak akldfj kladjf akdfjalk adkfjaldkfj alkdfjalk"),
-                ),
+              card(
+                url:
+                    'https://medicaldialogues.in/h-upload/2020/05/13/128694-cancer.webp',
+                t: 'Know more about Cancer',
+                d: 'ajldfkjakdfj addklfjalkdfjalk akldfjakldfj adklfjalkdf jakldfja kldfjakd falkfdfj kladkfj',
+              ),
+              SizedBox(
+                height: 10,
+              ),
+              card(
+                url:
+                    'https://www.sciencealert.com/images/2020-06/processed/cancer_topic_1024.jpg',
+                t: 'Know more about Cancer',
+                d: 'ajldfkjakdfj addklfjalkdfjalk akldfjakldfj adklfjalkdf jakldfja kldfjakd falkfdfj kladkfj',
+              ),
+              SizedBox(
+                height: 10,
               ),
             ],
           ),
         ),
-      ],
+      ),
+    );
+  }
+}
+
+class card extends StatelessWidget {
+  String t = "";
+  String d = "";
+  String url = "";
+  // ignore: use_key_in_widget_constructors
+  card({required this.t, required this.d, required this.url});
+  @override
+  Widget build(BuildContext context) {
+    return GestureDetector(
+      onTap: () {
+        Navigator.push(
+          context,
+          MaterialPageRoute(builder: (context) => Disease()),
+        );
+      },
+      child: Container(
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(5),
+          color: Colors.grey.shade900,
+        ),
+        //height: 200,
+        width: double.infinity,
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          // ignore: prefer_const_literals_to_create_immutables
+          children: [
+            Center(
+              child: Padding(
+                padding: const EdgeInsets.all(10.0),
+                child: Text(
+                  t,
+                  style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold),
+                ),
+              ),
+            ),
+            Image(image: NetworkImage(url)),
+            Padding(
+              padding: const EdgeInsets.all(10.0),
+              child: Text(
+                d,
+                style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 15,
+                    fontWeight: FontWeight.normal),
+              ),
+            ),
+          ],
+        ),
+      ),
     );
   }
 }
