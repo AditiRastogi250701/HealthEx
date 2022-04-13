@@ -75,6 +75,7 @@ class _HomePageState extends State<HomePage> {
             // ignore: prefer_const_literals_to_create_immutables
             children: [
               card(
+                myWidget: About(),
                 url:
                     'https://neurologysleepcentre.com/blog/wp-content/uploads/2021/12/parkinson2.jpg',
                 t: "Parkinson's Disease",
@@ -84,6 +85,7 @@ class _HomePageState extends State<HomePage> {
                 height: 10,
               ),
               card(
+                myWidget: About(),
                 url:
                     'https://medicaldialogues.in/h-upload/2020/05/13/128694-cancer.webp',
                 t: 'Know more about Cancer',
@@ -93,6 +95,7 @@ class _HomePageState extends State<HomePage> {
                 height: 10,
               ),
               card(
+                myWidget: About(),
                 url:
                     'https://www.sciencealert.com/images/2020-06/processed/cancer_topic_1024.jpg',
                 t: 'Know more about Cancer',
@@ -113,15 +116,20 @@ class card extends StatelessWidget {
   String t = "";
   String d = "";
   String url = "";
+  Widget myWidget;
   // ignore: use_key_in_widget_constructors
-  card({required this.t, required this.d, required this.url});
+  card(
+      {required this.t,
+      required this.d,
+      required this.url,
+      required this.myWidget});
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
         Navigator.push(
           context,
-          MaterialPageRoute(builder: (context) => About()),
+          MaterialPageRoute(builder: (context) => myWidget),
         );
       },
       child: Container(
@@ -143,6 +151,7 @@ class card extends StatelessWidget {
                   style: TextStyle(
                       color: Colors.white,
                       fontSize: 20,
+                      fontStyle: FontStyle.italic,
                       fontWeight: FontWeight.bold),
                 ),
               ),
