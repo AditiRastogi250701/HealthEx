@@ -10,4 +10,6 @@ Parkinson's often starts with a tremor in one hand. Other symptoms are slow move
                     2.Constipation
                     3.Fatigue
 
-are some major symptoms among various others
+Dataset Link: https://www.kaggle.com/code/darshanjain29/parkinsons-disease-solution/data
+
+
