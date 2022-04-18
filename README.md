@@ -28,5 +28,21 @@ It is the interior lining of the eyeball, including the retina (the light-sensit
 * Android application->Flutter
 * Machine learning Algos CNN
 
+### Models Used -
+
+                  I. Machine Learning Models -
+
+                                              1. Support Vector Classifier
+                                              2. KNN Classifier
+                                              3. Decision Trees
+                                              4. Gaussian NB Classifier
+                                              5. Logistic Regression
+                                              
+                 II. Deep Learning Models -
+                                              
+                                              1. EfficientNetB0
+                                              2. EfficientNetB2
+                                              3. MobileNet
+
 
 
