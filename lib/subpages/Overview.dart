@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:healthex/disease.dart';
 import 'package:healthex/homepage.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class Overview extends StatelessWidget {
   @override
@@ -16,6 +17,10 @@ class Overview extends StatelessWidget {
             children: [
               card(
                 //TODO: Open website
+                myStyle: TextStyle(
+                    color: Colors.white,
+                    fontSize: 15,
+                    fontWeight: FontWeight.normal),
                 myWidget: Disease(),
                 url:
                     'https://www.homecareassistancerichardson.com/wp-content/uploads/2019/09/Older-Adult-with-Parkinsons.jpeg.jpg',
@@ -24,6 +29,10 @@ class Overview extends StatelessWidget {
               ),
               card(
                 //TODO: Open website
+                myStyle: TextStyle(
+                    color: Colors.white,
+                    fontSize: 15,
+                    fontWeight: FontWeight.normal),
                 myWidget: Disease(),
                 url:
                     'https://www.verywellhealth.com/thmb/QCWyQsRcFEn_WKZuxSIu5GW6Unw=/1500x1000/filters:no_upscale():max_bytes(150000):strip_icc()/zhansen-5200700_Finaledit2-3e7eb00f1bdb4806adb3f67ca4404894.jpg',
@@ -35,5 +44,14 @@ class Overview extends StatelessWidget {
         ),
       ),
     );
+  }
+}
+
+_launchURL() async {
+  const url = 'https://flutter.io';
+  if (await canLaunch(url)) {
+    await launch(url);
+  } else {
+    throw 'Could not launch $url';
   }
 }

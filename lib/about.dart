@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:healthex/disease.dart';
+import 'package:healthex/subpages/Form.dart';
 import 'package:healthex/subpages/Overview.dart';
+import 'package:healthex/subpages/Symptoms.dart';
 
 class About extends StatelessWidget {
 //   const
@@ -15,8 +17,8 @@ class About extends StatelessWidget {
         body: TabBarView(
           children: [
             Overview(),
-            Disease(),
-            Disease(),
+            Symptoms(),
+            Forms(),
           ],
         ),
 
