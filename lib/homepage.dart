@@ -3,7 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:healthex/about.dart';
-import 'package:healthex/Heart/aboutHeart.dart';
+import 'package:healthex/brain/aboutBrain.dart';
 import 'package:healthex/disease.dart';
 
 class HomePage extends StatefulWidget {
@@ -94,11 +94,11 @@ class _HomePageState extends State<HomePage> {
                     color: Colors.white,
                     fontSize: 15,
                     fontWeight: FontWeight.normal),
-                myWidget: AboutHeart(),
+                myWidget: AboutBrain(),
                 url:
-                    'https://consumer.healthday.com/media-library/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpbWFnZSI6Imh0dHBzOi8vYXNzZXRzLnJibC5tcy8yNjgzNDg5NS9vcmlnaW4uanBnIiwiZXhwaXJlc19hdCI6MTY4OTMzNzU3MX0.RbaOiIQGKOEmExa8mEo-hdxj0TvpjF4Vn167IYK6GPs/image.jpg?width=1245&quality=85&coordinates=0%2C64%2C0%2C65&height=700',
-                t: 'Cardiovascular Disease',
-                d: 'Heart disease is the leading cause of death in the United States. The term “heart disease” refers to several types of heart conditions. In the United States....',
+                    'https://health.clevelandclinic.org/wp-content/uploads/sites/3/2020/02/brainTumor-475447149-770x533-1.jpg',
+                t: 'Brain Tumor',
+                d: 'A brain tumor is a mass or growth of abnormal cells in your brain. Many different types of brain tumors exist. Some brain tumors are noncancerous (benign), and some brain tumors are cancerous (malignant). Brain....',
               ),
               SizedBox(
                 height: 10,

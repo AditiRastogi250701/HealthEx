@@ -3,12 +3,12 @@ import 'package:flutter/material.dart';
 import '../../disease.dart';
 import '../../homepage.dart';
 
-class FormsHeart extends StatefulWidget {
+class FormsBrain extends StatefulWidget {
   @override
-  State<FormsHeart> createState() => _FormsHeartState();
+  State<FormsBrain> createState() => _FormsBrainState();
 }
 
-class _FormsHeartState extends State<FormsHeart> {
+class _FormsBrainState extends State<FormsBrain> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -27,33 +27,30 @@ class _FormsHeartState extends State<FormsHeart> {
                 ))),
       ),
       body: Container(
+        width: double.infinity,
         color: Colors.black,
         child: Padding(
           padding: const EdgeInsets.all(8.0),
-          child: SingleChildScrollView(
-            scrollDirection: Axis.vertical,
-            child: Column(
-              // ignore: prefer_const_literals_to_create_immutables
-              children: [
-                textFields(t1: 'AGE'),
-                textFields(t1: 'SEX'),
-                textFields(t1: 'CP'),
-                textFields(t1: 'TRESTBPS'),
-                textFields(t1: 'CHOL'),
-                textFields(t1: 'FBS'),
-                textFields(t1: 'RESTECG'),
-                textFields(t1: 'THALACH'),
-                textFields(t1: 'EXANG'),
-                textFields(t1: 'OLDPEAK'),
-                textFields(t1: 'SLOPE'),
-                textFields(t1: 'CA'),
-                textFields(t1: 'THAL'),
-                textFields(t1: 'TARGET'),
-                SizedBox(
-                  height: 100,
-                ),
-              ],
-            ),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            // ignore: prefer_const_literals_to_create_immutables
+            children: [
+              Container(
+                decoration: BoxDecoration(
+                    color: Colors.grey.shade700,
+                    borderRadius: BorderRadius.circular(10)),
+                height: 200,
+                width: 200,
+                child: Center(
+                    child: Text(
+                  'Add Images',
+                  style: TextStyle(fontSize: 20, color: Colors.blue),
+                )),
+              ),
+              SizedBox(
+                height: 100,
+              ),
+            ],
           ),
         ),
       ),
