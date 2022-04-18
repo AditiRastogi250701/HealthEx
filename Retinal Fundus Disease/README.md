@@ -51,3 +51,6 @@ The 39 classes are:
                        
                        
 These findings suggest that our DLP can be used for retinal fundus disease triage, particularly in remote areas around the world.
+
+
+Dataset Link: https://www.kaggle.com/datasets/linchundan/fundusimage1000
