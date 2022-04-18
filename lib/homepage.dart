@@ -3,6 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:healthex/about.dart';
+import 'package:healthex/Heart/aboutHeart.dart';
 import 'package:healthex/disease.dart';
 
 class HomePage extends StatefulWidget {
@@ -93,25 +94,14 @@ class _HomePageState extends State<HomePage> {
                     color: Colors.white,
                     fontSize: 15,
                     fontWeight: FontWeight.normal),
-                myWidget: About(),
+                myWidget: AboutHeart(),
                 url:
-                    'https://medicaldialogues.in/h-upload/2020/05/13/128694-cancer.webp',
-                t: 'Know more about Cancer',
-                d: 'ajldfkjakdfj addklfjalkdfjalk akldfjakldfj adklfjalkdf jakldfja kldfjakd falkfdfj kladkfj',
+                    'https://consumer.healthday.com/media-library/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpbWFnZSI6Imh0dHBzOi8vYXNzZXRzLnJibC5tcy8yNjgzNDg5NS9vcmlnaW4uanBnIiwiZXhwaXJlc19hdCI6MTY4OTMzNzU3MX0.RbaOiIQGKOEmExa8mEo-hdxj0TvpjF4Vn167IYK6GPs/image.jpg?width=1245&quality=85&coordinates=0%2C64%2C0%2C65&height=700',
+                t: 'Cardiovascular Disease',
+                d: 'Heart disease is the leading cause of death in the United States. The term “heart disease” refers to several types of heart conditions. In the United States....',
               ),
               SizedBox(
                 height: 10,
-              ),
-              card(
-                myStyle: TextStyle(
-                    color: Colors.white,
-                    fontSize: 15,
-                    fontWeight: FontWeight.normal),
-                myWidget: About(),
-                url:
-                    'https://www.sciencealert.com/images/2020-06/processed/cancer_topic_1024.jpg',
-                t: 'Know more about Cancer',
-                d: 'ajldfkjakdfj addklfjalkdfjalk akldfjakldfj adklfjalkdf jakldfja kldfjakd falkfdfj kladkfj',
               ),
               SizedBox(
                 height: 10,
