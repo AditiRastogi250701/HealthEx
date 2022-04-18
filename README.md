@@ -45,6 +45,12 @@ II. Deep Learning Models -
                                               3. MobileNet
 
 
-
-
+## Android app pics -
+<p float="left">
+<img src = "pics/1.jpeg" height=300>
+<img src = "pics/2.jpeg" height=300> 
+<img src = "pics/3.jpeg" height=300>
+<img src = "pics/4.jpeg" height=300>  
+<img src = "pics/5.jpeg" height=300>
+ </p>
 
