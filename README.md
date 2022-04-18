@@ -38,7 +38,7 @@ I. Machine Learning Models -
                                               4. Gaussian NB Classifier
                                               5. Logistic Regression
                                               
- II. Deep Learning Models -
+II. Deep Learning Models -
                                               
                                               1. EfficientNetB0
                                               2. EfficientNetB2
