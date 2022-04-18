@@ -30,7 +30,7 @@ It is the interior lining of the eyeball, including the retina (the light-sensit
 
 ### Models Used -
 
-                  I. Machine Learning Models -
+I. Machine Learning Models -
 
                                               1. Support Vector Classifier
                                               2. KNN Classifier
@@ -38,7 +38,7 @@ It is the interior lining of the eyeball, including the retina (the light-sensit
                                               4. Gaussian NB Classifier
                                               5. Logistic Regression
                                               
-                 II. Deep Learning Models -
+ II. Deep Learning Models -
                                               
                                               1. EfficientNetB0
                                               2. EfficientNetB2
