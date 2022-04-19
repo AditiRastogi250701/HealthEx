@@ -60,7 +60,7 @@ II. Deep Learning Models -
   <img src="https://contrib.rocks/image?repo=AditiRastogi250701/HealthEx" />
 </a>
 
-1. [TImsal Zehra Rizvi] - RA1911003010211 (https://github.com/Timsal123)
-2. [Ritik Chaudhary] - RA1911003010215 (https://github.com/Ritikchaudhary)
-3. [Aditi Rastogi] - RA1911003010219 (https://github.com/AditiRastogi250701)
-4. [Shresth Kapoor] - RA1911003010220 (https://github.com/shresthkapoor7)
+1. [TImsal Zehra Rizvi](https://github.com/Timsal123) - RA1911003010211 
+2. [Ritik Chaudhary](https://github.com/Ritikchaudhary) - RA1911003010215 
+3. [Aditi Rastogi](https://github.com/AditiRastogi250701) - RA1911003010219 
+4. [Shresth Kapoor](https://github.com/shresthkapoor7) - RA1911003010220 
