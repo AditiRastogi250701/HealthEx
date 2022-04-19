@@ -54,3 +54,10 @@ II. Deep Learning Models -
 <img src = "pics/5.jpeg" height=300>
  </p>
 
+## Contributors
+
+<a href="https://github.com/AditiRastogi250701/HealthEx/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=AditiRastogi250701/HealthEx" />
+</a>
+
+Made with [contrib.rocks](https://contrib.rocks).
